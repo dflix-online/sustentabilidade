@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoFuture | UI, Identidade & Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#04060d;color:#fff;overflow-x:hidden}
+
+header{position:fixed;width:100%;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.4);backdrop-filter:blur(12px);z-index:1000}
+header h1{color:#00ffcc}
+nav a{margin-left:30px;color:#aaa;text-decoration:none;transition:.3s}
+nav a:hover{color:#00ffcc}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#00ffcc22,#000)}
+.hero h2{font-size:70px;background:linear-gradient(90deg,#00ffcc,#00aaff);-webkit-background-clip:text;color:transparent}
+.hero p{margin-top:20px;color:#bbb}
+
+section{padding:120px 60px}
+.title{font-size:42px;color:#00ffcc;margin-bottom:20px}
+.subtitle{color:#aaa;max-width:800px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
+.card{padding:30px;border-radius:20px;background:rgba(255,255,255,.04);transition:.4s;transform-style:preserve-3d}
+.card:hover{transform:rotateY(8deg) rotateX(5deg) scale(1.05);background:rgba(0,255,204,.08)}
+.card h3{color:#00ffcc;margin-bottom:10px}
+.card p{color:#ccc}
+
+.parallax{height:60vh;display:flex;justify-content:center;align-items:center;background:linear-gradient(#000,#001f1a);text-align:center}
+.parallax h2{font-size:48px}
+
+.badge{display:inline-block;margin-top:15px;padding:6px 12px;border:1px solid #00ffcc;border-radius:20px;font-size:12px;color:#00ffcc}
+
+.fade{opacity:0;transform:translateY(40px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
+
+footer{text-align:center;padding:50px;color:#666}
+</style>
+</head>
+<body>
+
+<header>
+<h1>EcoFuture</h1>
+<nav>
+<a href="#">Início</a>
+<a href="#profissoes">Profissões</a>
+<a href="#sustentabilidade">Sustentabilidade</a>
+<a href="#mercado">Mercado</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>DESIGN QUE MUDA O FUTURO</h2>
+<p>UI Design • Identidade Visual • Criação de Sites</p>
+</div>
+</section>
+
+<section id="profissoes" class="fade">
+<h2 class="title">As 3 Profissões</h2>
+<p class="subtitle">Essas áreas são essenciais no mercado digital e têm impacto direto na forma como empresas comunicam sustentabilidade.</p>
+
+<div class="grid">
+<div class="card">
+<h3>UI Design</h3>
+<p>Criação de interfaces digitais modernas, intuitivas e eficientes.</p>
+<span class="badge">Sustentável</span>
+<p>Interfaces leves reduzem consumo de energia e melhoram desempenho.</p>
+</div>
+
+<div class="card">
+<h3>Identidade Visual</h3>
+<p>Constrói a imagem de uma marca através de cores, tipografia e estilo.</p>
+<span class="badge">Impacto</span>
+<p>Marcas sustentáveis se destacam e geram mais conexão com o público.</p>
+</div>
+
+<div class="card">
+<h3>Criação de Sites</h3>
+<p>Desenvolvimento de plataformas digitais funcionais e responsivas.</p>
+<span class="badge">Tecnologia</span>
+<p>Sites otimizados consomem menos recursos e carregam mais rápido.</p>
+</div>
+</div>
+</section>
+
+<section class="parallax">
+<h2>O design pode reduzir impactos ambientais 🌱</h2>
+</section>
+
+<section id="sustentabilidade" class="fade">
+<h2 class="title">Soluções Sustentáveis</h2>
+<p class="subtitle">A sustentabilidade vai além do meio ambiente: ela também envolve tecnologia, comportamento e inovação.</p>
+
+<div class="grid">
+<div class="card">
+<h3>Design eficiente</h3>
+<p>Menos elementos visuais = menos processamento = menos energia.</p>
+</div>
+
+<div class="card">
+<h3>Dark Mode</h3>
+<p>Interfaces escuras reduzem consumo de bateria em telas OLED.</p>
+</div>
+
+<div class="card">
+<h3>Hospedagem verde</h3>
+<p>Servidores com energia renovável diminuem impacto ambiental.</p>
+</div>
+
+<div class="card">
+<h3>Consumo consciente</h3>
+<p>Usuários informados fazem escolhas melhores no digital.</p>
+</div>
+</div>
+</section>
+
+<section id="mercado" class="fade">
+<h2 class="title">Mercado de Trabalho</h2>
+<p class="subtitle">Empresas estão buscando profissionais que unem tecnologia e sustentabilidade.</p>
+
+<div class="grid">
+<div class="card">
+<h3>Alta demanda</h3>
+<p>UI e UX Designers estão entre os mais procurados.</p>
+</div>
+
+<div class="card">
+<h3>Diferencial competitivo</h3>
+<p>Sustentabilidade aumenta valor das marcas.</p>
+</div>
+
+<div class="card">
+<h3>Futuro digital</h3>
+<p>Quem domina design + tecnologia + sustentabilidade sai na frente.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>Projeto CIEE | EcoFuture</p>
+</footer>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})
+});
+faders.forEach(el=>observer.observe(el));
+
+// cursor premium
+const cursor=document.createElement('div');
+cursor.style.cssText='width:18px;height:18px;border:2px solid #00ffcc;border-radius:50%;position:fixed;pointer-events:none;transform:translate(-50%,-50%);transition:.08s';
+document.body.appendChild(cursor);
+document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+</script>
+
+</body>
+</html>
